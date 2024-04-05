@@ -2,6 +2,8 @@ from faker import Faker
 import random
 import mysql.connector
 
+# fake = Faker('pt_BR')
+
 fake = Faker()
 
 # Valores aleatórios para setor_id, porte_id e eixo_id
@@ -26,7 +28,7 @@ contador_commits = 0
 
 while True:
     # Gerar dados fictícios
-    titulo = fake.sentence(nb_words=3) 
+    titulo = fake.text(max_nb_chars=45)
     descricao = fake.text(max_nb_chars=200)  
     setor_id, porte_id, eixo_id = gerar_valores_aleatorios()
 
