@@ -1,10 +1,6 @@
 # Script para Preenchimento de Banco de Dados com Faker
 
-Este script Python foi desenvolvido para preencher um banco de dados MySQL com dados fictícios gerados pelo Faker. Ele gera títulos e descrições aleatórios para perguntas, que podem ser usados para população de bancos de dados para testes, desenvolvimento ou qualquer outro propósito que exija dados de exemplo.
-
-## Breve Descrição
-
-O script utiliza a biblioteca Faker para gerar dados fictícios realistas. Os dados gerados incluem títulos de perguntas e descrições correspondentes. Após a geração dos dados, eles são inseridos em uma tabela chamada "perguntas" em um banco de dados MySQL.
+Este script Python foi desenvolvido para preencher um banco de dados MySQL com dados fictícios gerados pelo Faker. Ele gera títulos e descrições aleatórios para perguntas, que podem ser usados para população de bancos de dados para testes, desenvolvimento ou qualquer outro propósito que exija dados de exemplo. Nesse caso esta sendo populada a tabela perguntas de um projeto específico, mas mudando o código para a lógica da tabela que você deseja popular também funciona.
 
 ## Pré-requisitos
 
