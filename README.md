@@ -17,7 +17,6 @@ Você pode instalar essas bibliotecas usando o pip:
 
 ```
 pip install Faker mysql-connector-python
-
 ```
 
 ## Configuração
@@ -30,7 +29,6 @@ Para executar o script, use o seguinte comando no terminal:
 
 ```
 python script.py
-
 ```
 
 
