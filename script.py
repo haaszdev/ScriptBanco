@@ -26,11 +26,10 @@ contador_commits = 0
 
 while True:
     # Gerar dados fictícios
-    titulo = fake.sentence() 
-    descricao = fake.paragraph(max_nb_chars=200) 
+    titulo = fake.sentence(nb_words=3) 
+    descricao = fake.text(max_nb_chars=200)  
     setor_id, porte_id, eixo_id = gerar_valores_aleatorios()
 
-    
     cursor.execute("INSERT INTO perguntas (titulo, descricao, setor_id, porte_id, eixo_id) VALUES (%s, %s, %s, %s, %s)", (titulo, descricao, setor_id, porte_id, eixo_id))
     contador_linhas += 1
 
