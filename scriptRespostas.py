@@ -4,7 +4,6 @@ import mysql.connector
 
 fake = Faker(locale='pt_BR')
 
-# Valores aleatórios para Empresa_id, Perguntas_id e Formulario_id
 def gerar_valores_aleatorios():
     Empresa_id = random.randint(1, 6)
     Perguntas_id = random.randint(1, 4)
@@ -24,7 +23,6 @@ contador_linhas = 0
 contador_commits = 0
 
 while True:
-    # Gerar dados fictícios
     resposta = fake.text(max_nb_chars=45)
     url_arquivo = fake.file_path(depth=2)
     Empresa_id, Perguntas_id, Formulario_id = gerar_valores_aleatorios()
@@ -32,7 +30,6 @@ while True:
     cursor.execute("INSERT INTO respostas (resposta, url_arquivo, Empresa_id, Perguntas_id, Formulario_id) VALUES (%s, %s, %s, %s, %s)", (resposta, url_arquivo, Empresa_id, Perguntas_id, Formulario_id))
     contador_linhas += 1
 
-    # Fazer commit a cada 15 linhas inseridas
     if contador_linhas % 15 == 0:
         conn_mysql.commit()
         contador_commits += 1
